@@ -10,4 +10,4 @@ Beim Containerisieren war die Herausforderung, die verschiedenen Welten zusammen
 
 Am Ende hat mir das Projekt extrem dabei geholfen, die praktische Seite von MLOps zu verstehen. Ich fühle mich jetzt deutlich sicherer darin, ein Modell aus der reinen Prototypen-Phase in ein sauberes, produktionsnahes Setup zu bringen. Das wird mir bei zukünftigen Projekten enorm helfen, bei denen die Infrastruktur und das Deployment genauso wichtig sind wie die eigentliche KI-Logik.
 
-Ich habe nicht verstanden, wieso wir ein Sentiment-model verwendet haben für die Analyse von Spam. Ich denke es zeigt, dass die KI-Modelle mit bedacht gewählt werden müssen für die Aufgabe, aber in einer Aufgabe, wo wir die Grundlagen lernen sollen, fand ich es ein wenig fehl am Platz. 
+Ich habe nicht verstanden, wieso wir ein Sentiment-model verwendet haben für die Analyse von Spam. Das "moderne" Modell war kaum halb so gut wie eine Regressionsanalyse und hat noch länger gebraucht. Ich denke es zeigt, dass die KI-Modelle mit bedacht gewählt werden müssen für die Aufgabe, aber in einer Aufgabe, wo wir die Grundlagen lernen sollen, fand ich es ein wenig fehl am Platz. 
