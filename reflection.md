@@ -1,0 +1,11 @@
+# Meine Reflexion zum Projekt
+
+Als Student mit etwas KI-Erfahrung war dieses Projekt ein echt wichtiger Schritt für mich. Bis jetzt habe ich mich im Studium meistens darauf beschränkt, in Notebooks mit Modellen herumzuexperimentieren und die Algorithmen dahinter zu verstehen. Aber ein komplettes Docker-Image für eine KI-Anwendung zu bauen und die Pipeline über ein zentrales `main.py`-Skript sauber zu verbinden, war das erste Mal, dass ich das grosse Ganze ausserhalb des reinen Modells steuern musste.
+
+Der wichtigste Lerneffekt war definitiv das Zusammenspiel der einzelnen Komponenten. Mein Skript zeigt diesen Wechsel von der typischen "Jupyter-Notebook-Mentalität" hin zu sauberer, modularer Softwareentwicklung. Allein schon das Handling der Importe mit dem `try-except`-Block für lokale Läufe und den Docker-Container hat mir gezeigt, wie viel Detailarbeit nötig ist, damit Code nicht nur auf meinem Rechner, sondern überall zuverlässig läuft.
+
+Durch das Schreiben des Dockerfiles musste ich mich intensiv mit den genauen Anforderungen meines Codes auseinandersetzen. Die Pipeline ist ja recht dynamisch: Verzeichnisse wie `data/raw` und `results` werden über `pathlib` erst beim Start erstellt, die Datenaufteilung muss wegen der Vergleichbarkeit über den Seed von 42 absolut reproduzierbar sein, und am Ende treffen klassische Regression und ein Transformer-Modell direkt aufeinander.
+
+Beim Containerisieren war die Herausforderung, die verschiedenen Welten zusammenzubringen – die eher leichtgewichtigen Bibliotheken wie `pandas` und `scikit-learn` auf der einen Seite und die potenziell schweren Transformer-Abhängigkeiten auf der anderen Seite. Zudem musste ich darauf achten, wie Docker mit Filesystemen umgeht, damit die Ergebnisse und die Diskrepanz-Tabellen (`disagree_df`) nach dem Container-Stopp nicht einfach weg sind, sondern sauber persistiert werden.
+
+Am Ende hat mir das Projekt extrem dabei geholfen, die praktische Seite von MLOps zu verstehen. Ich fühle mich jetzt deutlich sicherer darin, ein Modell aus der reinen Prototypen-Phase in ein sauberes, produktionsnahes Setup zu bringen. Das wird mir bei zukünftigen Projekten enorm helfen, bei denen die Infrastruktur und das Deployment genauso wichtig sind wie die eigentliche KI-Logik.
