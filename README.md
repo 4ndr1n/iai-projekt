@@ -10,3 +10,4 @@ docker build -t iai-auftrag .
 ```
 docker run -d --name iai-projekt iai-projekt
 ```
+Results will be printet into logs.
